@@ -63,6 +63,7 @@ public class HanLPTokenizerFactory extends AbstractTokenizerFactory {
         return new HanLPTokenizerFactory(indexSettings, env, name, settings, HanLPType.SPEED);
     }
 
+    @Override
     public Tokenizer create() {
         switch (this.hanLPType) {
             case HANLP:
