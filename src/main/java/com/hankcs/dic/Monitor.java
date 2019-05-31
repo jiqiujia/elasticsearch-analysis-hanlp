@@ -29,6 +29,7 @@ public class Monitor implements Runnable {
 
     @Override
     public void run() {
+        HanLP.Config.enableDebug();
         List<DictionaryFile> originalDictionaryFileList = DictionaryFileCache.getCustomDictionaryFileList();
         logger.debug("hanlp original custom dictionary: {}", Arrays.toString(originalDictionaryFileList.toArray()));
         reloadProperty();

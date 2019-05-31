@@ -7,6 +7,7 @@ import com.hankcs.hanlp.dictionary.stopword.CoreStopWordDictionary;
 import com.hankcs.hanlp.seg.Segment;
 import com.hankcs.hanlp.seg.common.Term;
 import com.hankcs.hanlp.tokenizer.TraditionalChineseTokenizer;
+import com.hankcs.hanlp.utility.TextUtility;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
@@ -94,6 +95,10 @@ public class HanLPTokenizer extends Tokenizer {
             term = segment.next();
             if (term == null) {
                 break;
+            }
+            // fix 空格索引问题
+            if (TextUtility.isBlank(term.word)) {
+                continue;
             }
             if (configuration.isEnablePorterStemming() && term.nature == Nature.nx) {
                 term.word = stemmer.stem(term.word);
