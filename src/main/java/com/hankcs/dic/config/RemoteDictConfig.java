@@ -26,7 +26,7 @@ public class RemoteDictConfig {
      */
     private static RemoteDictConfig singleton;
 
-    private static final Logger logger = Loggers.getLogger(RemoteDictConfig.class);
+    private static final Logger logger = Loggers.getLogger(RemoteDictConfig.class, "hanlp");
 
     private static final String REMOTE_EXT_DICT = "remote_ext_dict";
 

@@ -26,7 +26,7 @@ import java.util.Properties;
  */
 public class ExtMonitor implements Runnable {
 
-    private static final Logger logger = Loggers.getLogger(ExtMonitor.class);
+    private static final Logger logger = Loggers.getLogger(ExtMonitor.class, "hanlp");
 
     ExtMonitor() {
         SecurityManager sm = System.getSecurityManager();

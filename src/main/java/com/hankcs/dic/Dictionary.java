@@ -33,7 +33,7 @@ public class Dictionary {
      */
     private static final String REMOTE_CONFIG_FILE_NAME = "hanlp-remote.xml";
 
-    private static final Logger logger = Loggers.getLogger(Dictionary.class);
+    private static final Logger logger = Loggers.getLogger(Dictionary.class, "hanlp");
 
     private static ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
 

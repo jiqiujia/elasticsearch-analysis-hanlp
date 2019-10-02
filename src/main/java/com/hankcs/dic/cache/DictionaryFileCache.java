@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class DictionaryFileCache {
 
-    private static final Logger logger = Loggers.getLogger(DictionaryFileCache.class);
+    private static final Logger logger = Loggers.getLogger(DictionaryFileCache.class, "hanlp");
 
     private static Path cachePath = null;
 

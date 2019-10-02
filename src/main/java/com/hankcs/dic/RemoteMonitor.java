@@ -36,7 +36,7 @@ import java.security.PrivilegedAction;
  */
 public class RemoteMonitor implements Runnable {
 
-    private static final Logger logger = Loggers.getLogger(RemoteMonitor.class);
+    private static final Logger logger = Loggers.getLogger(RemoteMonitor.class, "hanlp");
 
     private static CloseableHttpClient httpclient = HttpClients.createDefault();
     /**

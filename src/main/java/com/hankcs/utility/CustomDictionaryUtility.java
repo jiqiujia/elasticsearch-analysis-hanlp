@@ -27,7 +27,7 @@ import java.util.TreeMap;
  */
 public class CustomDictionaryUtility {
 
-    private static final Logger logger = Loggers.getLogger(CustomDictionaryUtility.class);
+    private static final Logger logger = Loggers.getLogger(CustomDictionaryUtility.class, "hanlp");
 
     public static boolean reload() {
         CustomDictionary.dat.getSize();
